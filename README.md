@@ -1,3 +1,3 @@
 # Ecommerce JS Example
 
-È um ecormmerce
+É um ecommerce.
