@@ -1,5 +1,3 @@
-const API_URL = "http://localhost:8080";
-
 function criarLinhaProduto(produto) {
   const trProduto = document.createElement("tr");
 
@@ -22,7 +20,7 @@ function criarLinhaProduto(produto) {
 }
 
 async function handleCarregarProdutos() {
-  const response = await fetch(`${API_URL}/produtos`);
+  const response = await fetch(`/produtos`);
   const data = await response.json();
 
   const tableData = document.querySelector("#produtos-table tbody");
@@ -46,7 +44,7 @@ async function handleCadastrarProduto(event) {
     preco: Number(form.preco.value),
   };
 
-  const response = await fetch(`${API_URL}/produtos`, {
+  const response = await fetch(`/produtos`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
